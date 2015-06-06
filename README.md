@@ -1,0 +1,2 @@
+# jackyyyy.github.io
+mingblog
