@@ -51,7 +51,7 @@
           var nextFourChars = inputText.substr(charIndex,4);
           if(nextFourChars=='<BR>' || nextFourChars=='<br>'){
             theChar  = '<BR>';
-            charIndex+=3;
+            // charIndex+=3;
           }//判断回车位置
           initString = initString + theChar + "<SPAN id='blink'>_</SPAN>";//确定打字效果的字符串
           document.getElementById('myContent').innerHTML = initString;
