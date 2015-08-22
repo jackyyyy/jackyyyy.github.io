@@ -11,12 +11,79 @@
 
     <script type="text/javascript" src="javascripts/modernizr.js"></script>
     <script type="text/javascript" src="javascripts/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script> 
+    <style type="text/css">
+      body{
+          font-family: Arial;
+          margin-top:0px;
+          background-repeat:no-repeat;
+      }
+      #myContent, #myContent blink{
+          width: 500px;
+          height: 300px;
+          position: absolute;
+          left: -250px;
+          margin-left: 50%;
+          margin-top: 10%;
+          background-color: #ddd;
+          border: 1px solid #ccc;
+          box-shadow: 3px 3px 3px #ccc;
+          font-family:courier;
+      }    
+      blink{
+          display:inline;
+      }
+      </style>
+      <script type="text/javascript"> 
+      var charIndex = -1;
+      var stringLength = 0;
+      var inputText;
+      function writeContent(init){
+      if(init){
+        inputText = document.getElementById('contentToWrite').innerHTML;//获取要打出的字
+      }
+          if(charIndex==-1){
+              charIndex = 0;
+              stringLength = inputText.length;//获取要打的字的段落长度
+          }
+          var initString = document.getElementById('myContent').innerHTML;
+      initString = initString.replace(/<SPAN.*$/gi,"");//初始化打字区域
+          
+          var theChar = inputText.charAt(charIndex);//获取固定位置的字符
+          var nextFourChars = inputText.substr(charIndex,4);
+          if(nextFourChars=='<BR>' || nextFourChars=='<br>'){
+            theChar  = '<BR>';
+            charIndex+=3;
+          }//判断回车位置
+          initString = initString + theChar + "<SPAN id='blink'>_</SPAN>";//确定打字效果的字符串
+          document.getElementById('myContent').innerHTML = initString;
+          charIndex = charIndex/1 +1;
+          if(charIndex%2==1){
+               document.getElementById('blink').style.display='none';
+          }else{
+               document.getElementById('blink').style.display='inline';
+          }
+                  
+          if(charIndex<=stringLength){
+              setTimeout('writeContent(false)',150);
+          }else{
+            blinkSpan();
+          }  
+      }
+      var currentStyle = 'inline';
+      function blinkSpan(){
+        if(currentStyle=='inline'){
+        currentStyle='none';
+        }else{
+        currentStyle='inline';
+        }
+        document.getElementById('blink').style.display = currentStyle;
+        setTimeout('blinkSpan()',500);
+      }
+        $(document).ready(function () {
+          $('#main_content').headsmart()
+        })
+      </script>
     <title>Jackyyyy.GitHub.io by jackyyyy</title>
   </head>
 
@@ -49,6 +116,12 @@
         <p>开始写博客了，哈哈哈</p>
       </section>
 
+      <div id="myContent">
+      </div>
+      <div id="contentToWrite" style="display:none">
+      我的第一个打字效果，是不是很炫酷，哈哈哈哈！<br>
+      </div>
+
       <footer>
         <span class="ribbon-outer">
           <span class="ribbon-inner">
@@ -72,6 +145,10 @@
               var pageTracker = _gat._getTracker("明博");
             pageTracker._trackPageview();
             } catch(err) {}
+          </script>
+          
+          <script type="text/javascript">
+          writeContent(true);
           </script>
 
   </body>
