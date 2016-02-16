@@ -65,7 +65,7 @@
             }
                     
             if(charIndex<=stringLength){
-                setTimeout('writeContent(false)',150);
+                setTimeout('writeContent(false)',1500);
             }else{
               blinkSpan();
             }  
@@ -78,7 +78,7 @@
           currentStyle='inline';
           }
           document.getElementById('blink').style.display = currentStyle;
-          setTimeout('blinkSpan()',2000);
+          setTimeout('blinkSpan()',500);
         }
         $(document).ready(function () {
           $('#main_content').headsmart()
