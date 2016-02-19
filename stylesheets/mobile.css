@@ -299,9 +299,8 @@ span.banner-fix {
 
 section#main_content {
   z-index: 2;
-  float: left;
   min-height: 185px;
-  padding: 20px 40px 0;
+  margin-top: 120px;
 }
 
 /* footer */
