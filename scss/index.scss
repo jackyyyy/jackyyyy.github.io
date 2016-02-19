@@ -1,9 +1,15 @@
 @charset 'utf-8';
 
-.me-item1 {
+@mixin item {
   width: 170px;
   height: 300px;
   border: 1px solid #ddd;
   border-radius: 6px;
   background-color: #fff;
+}
+
+@for $i from 1 to 4 {
+  .me-item-#{$i} {
+    @include item;
+  }
 }

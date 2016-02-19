@@ -1,4 +1,18 @@
-.me-item1 {
+.me-item-1 {
+  width: 170px;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff; }
+
+.me-item-2 {
+  width: 170px;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff; }
+
+.me-item-3 {
   width: 170px;
   height: 300px;
   border: 1px solid #ddd;
