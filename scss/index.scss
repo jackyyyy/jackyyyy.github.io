@@ -1,5 +1,27 @@
 @charset 'utf-8';
 
+body {
+  margin-top: 0;
+  background-repeat: no-repeat;
+  font-family: Arial;
+}
+#myContent,
+#myContent blink {
+  position: absolute;
+  left: -250px;
+  width: 300px;
+  height: 200px;
+  margin-top: 10%;
+  margin-left: 50%;
+  border: 1px solid #ccc;
+  background-color: #ddd;
+  font-family: courier;
+  box-shadow: 3px 3px 3px #ccc;
+}
+blink {
+  display: inline;
+}
+
 .me-item {
   float: left;
   width: 200px;
@@ -25,11 +47,11 @@
     }
   }
   .img-info {
+    margin-top: 10px;
     font-family: simsun;
     font-size: 16px;
     font-weight: bold;
     color: #666;
     text-align: center;
-    margin-top: 10px;
   }
 }
