@@ -15,7 +15,12 @@
     width: 100%;
     height: 100%;
     border-radius: 6px; }
+    .me-item .image img:hover {
+      box-shdow: 3px 3px 3px #ddd; }
 .me-item .img-info {
-  font-size: 14px;
+  font-family: simsun;
+  font-size: 16px;
+  font-weight: bold;
   color: #666;
-  text-align: center; }
+  text-align: center;
+  margin-top: 10px; }
