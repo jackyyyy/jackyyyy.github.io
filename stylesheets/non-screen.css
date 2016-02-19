@@ -57,7 +57,8 @@ span.banner-fix {
 }
 
 section#main_content {
-  padding: 20px 40px 0;
+  /*padding: 20px 40px 0;*/
+  margin-top: 120px;
 }
 
 footer {
