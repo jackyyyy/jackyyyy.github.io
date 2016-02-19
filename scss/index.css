@@ -16,7 +16,7 @@
     height: 100%;
     border-radius: 6px; }
     .me-item .image img:hover {
-      box-shdow: 3px 3px 3px #ddd; }
+      box-shadow: 3px 3px 3px #ddd; }
 .me-item .img-info {
   font-family: simsun;
   font-size: 16px;
