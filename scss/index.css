@@ -24,8 +24,9 @@ blink {
 
 .me-item {
     float: left;
-    width: 200px;
-    height: 300px;
+    position: relative;
+    width: 180px;
+    height: 210px;
     margin: 20px 10px;
     border: 1px solid #ddd;
     border-radius: 6px;
@@ -38,8 +39,10 @@ blink {
 
 .me-item .me-image {
     width: 90%;
-    height: 80%;
+    float: left;
+    height: 100%;
     padding: 8px;
+    margin: 0 auto;
 }
 
 .me-item .me-image img {
@@ -51,10 +54,14 @@ blink {
 }
 
 .me-item .img-info {
-    margin-top: 10px;
     font-family: simsun;
     font-size: 16px;
     font-weight: bold;
     color: #666;
+    width: 20px;
     text-align: center;
+    height: 70px;
+    right: 0;
+    position: absolute;
+    margin: 8px 8px 0 0;
 }
