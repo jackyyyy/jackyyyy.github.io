@@ -16,7 +16,7 @@ $(function() {
 				$("<div class='circle'></div>").html(which).css({
 					"top": Math.ceil(Math.random() * $(document).height()),
 					"left": Math.ceil(Math.random() * $(document).width()),
-                    "color": "rgba(255, 204, 204, ." + Math.random() + ")",
+                    "color": "#ffcccc",
                     // "background": '#'+('000000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6)
 				}).appendTo("body").fadeIn("slow", function() {
 					$(this).fadeOut("slow", function() {
