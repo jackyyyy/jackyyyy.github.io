@@ -55,7 +55,7 @@ blink {
 
 .me-item .img-info {
     font-family: simsun;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     color: #666;
     width: 20px;
@@ -63,7 +63,7 @@ blink {
     height: 70px;
     right: 0;
     position: absolute;
-    margin: 8px 8px 0 0;
+    margin: 75px 5px 0 0;
 }
 
 .wrap-img {
