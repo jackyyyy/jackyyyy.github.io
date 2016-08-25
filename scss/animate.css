@@ -58,11 +58,12 @@ body {
     position: absolute;
     width: 80px;
     height: 80px;
+    line-height: 80px;
     border-radius: 50%;
     background: #CCFFFF;
     border: 1px solid #FFFFCC;
     box-shadow: inset 0 0 15px #FFCCCC;
     text-align: center;
-    line-height: 50px;
+    font-size: 30px;
     color: #666666;
 }
