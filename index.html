@@ -6,20 +6,45 @@
     <meta name="viewport" content="width=640">
 
     <link rel="stylesheet" href="scss/bootstrap-3.3.5.css">
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen" />
+    <!-- <link rel="stylesheet" href="stylesheets/core.css" media="screen" /> -->
     <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)" />
-    <link rel="stylesheet" href="stylesheets/github-light.css" />
-    <link rel="stylesheet" href="scss/index.css" />
+    <!-- <link rel="stylesheet" href="stylesheets/github-light.css" /> -->
+    <link rel="stylesheet" href="scss/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/lightbox.css" />
+    <link rel="stylesheet" href="scss/gooey.css" />
+    <link rel="stylesheet" href="scss/livedemo.css" />
+    <link rel="stylesheet" href="scss/index.css" />
     <title>阿菜</title>
+
   </head>
-
+  
   <body>
+    <header>
+      <div style="height: 80px;width: 100%;background:#ddd;">
+        <div class="col-xs-12">
+            <nav id="gooey-h">
+                <input type="checkbox" class="menu-open" name="menu-open2" id="menu-open2" />
+                <label class="open-button" for="menu-open2">
+                    <span class="burger burger-1"></span>
+                    <span class="burger burger-2"></span>
+                    <span class="burger burger-3"></span>
+                </label>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-train"></i> </a>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-bicycle"></i> </a>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-rocket"></i> </a>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-automobile"></i> </a>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-train"></i> </a>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-bicycle"></i> </a>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-rocket"></i> </a>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-automobile"></i> </a>
+            </nav>
+        </div>
+      </div>
+    </header>
     <div class="shell">
-
-      <section id="main_content">
+      <!-- <section id="main_content">
         <div class="me-item">
-          <a href="images/cheqiancao.jpg" data-lightbox="image-1" title="My caption" class="me-image">
+          <a href="images/cheqiancao.jpg" data-lightbox="image-1" title="" class="me-image">
             <div class="wrap-img">
               <img src="images/cheqiancao.jpg" alt="">
             </div>
@@ -29,7 +54,7 @@
           </div>
         </div>
         <div class="me-item">
-          <a href="images/bianhua.jpg" data-lightbox="image-1" title="My caption" class="me-image">
+          <a href="images/bianhua.jpg" data-lightbox="image-1" title="" class="me-image">
             <div class="wrap-img">
               <img src="images/bianhua.jpg" alt="">
             </div>
@@ -39,7 +64,7 @@
           </div>
         </div>
         <div class="me-item">
-          <a href="images/pugongying.jpg" data-lightbox="image-1" title="My caption" class="me-image">
+          <a href="images/pugongying.jpg" data-lightbox="image-1" title="" class="me-image">
             <div class="wrap-img">
               <img src="images/pugongying.jpg" alt="">
             </div>
@@ -48,20 +73,182 @@
             蒲公英
           </div>
         </div>
-      </section>
+      </section> -->
 
-      <a href="h/special.html" class="btn btn-info">抽奖</a>
+      <section>
+        <div>
+          <nav id="gooey-upper">
+              <input type="checkbox" class="menu-open" name="menu-open1" id="menu-open1" />
+              <label class="open-button" for="menu-open1">
+                  <span class="burger burger-1"></span>
+                  <span class="burger burger-2"></span>
+                  <span class="burger burger-3"></span>
+              </label>
+              <a href="h/special.html" class="gooey-menu-item"> <i title="Features" class="fa fa-cog fa-2x"></i> </a>
+              <a href="#h-spaced-menu" class="gooey-menu-item"> <i title="Horizontal Menu" class="fa fa-arrows-h fa-2x"></i> </a>
+              <a href="#menu-v-example" class="gooey-menu-item"> <i title="Vertical Menu" class="fa fa-arrows-v fa-2x"></i> </a>
+              <a href="#docs" class="gooey-menu-item"> <i title="Docs" class="fa fa-book fa-2x"></i> </a>
+              <a href="#event-api" class="gooey-menu-item"> <i title="Event API" class="fa fa-code fa-2x"></i> </a>
+              <a href="#round" class="gooey-menu-item"> <i title="Round Menu" class="fa fa-circle fa-2x"></i> </a>
+          </nav>
+        </div>
+
+       <!--  <div class="col-md-5 col-xs-12 col-sm-6 round-example">
+            <nav id="gooey-round">
+                <input type="checkbox" class="menu-open" name="menu-open3" id="menu-open3" />
+                <label class="open-button" for="menu-open3">
+                    <span class="burger burger-1"></span>
+                    <span class="burger burger-2"></span>
+                    <span class="burger burger-3"></span>
+                </label>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-train"></i> </a>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-bicycle"></i> </a>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-rocket"></i> </a>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-automobile"></i> </a>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-plane"></i> </a>
+            </nav>
+        </div> -->
+        <div class="col-md-5 col-xs-12 col-sm-6 round-example">
+            <nav id="gooey-API">
+                <input type="checkbox" class="menu-open" name="menu-open3" id="menu-open3" />
+                <label class="open-button" for="menu-open3">
+                    <span class="burger burger-1"></span>
+                    <span class="burger burger-2"></span>
+                    <span class="burger burger-3"></span>
+                </label>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-train"></i> </a>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-bicycle"></i> </a>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-rocket"></i> </a>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-automobile"></i> </a>
+                <a href="#" class="gooey-menu-item"> <i class="fa fa-plane"></i> </a>
+            </nav>
+        </div>
+      </section>
     </div>
 
     <script src="javascripts/modernizr.js"></script>
     <script src="javascripts/jquery.min.js"></script>
     <script src="javascripts/headsmart.min.js"></script> 
+    <script src="javascripts/gooey.min.js"></script> 
     <script src="javascripts/lightbox-2.6.min.js"></script>
     <script type="text/javascript">
       try {
         var pageTracker = _gat._getTracker("明博");
       pageTracker._trackPageview();
       } catch(err) {}
+    </script>
+
+
+    <script>
+    $(function($) {
+        $("#gooey-upper").gooeymenu({
+            bgColor: "#ff6666",
+            contentColor: "white",
+            style: "circle",
+            horizontal: {
+                menuItemPosition: "glue"
+            },
+            vertical: {
+                menuItemPosition: "spaced",
+                direction: "up"
+            },
+            circle: {
+                radius: 80
+            },
+            margin: "small",
+            size: 90,
+            bounce: true,
+            bounceLength: "small",
+            transitionStep: 100,
+            hover: "#e55b5b"
+        });
+        $("#gooey-h").gooeymenu({
+            bgColor: "#68d099",
+            contentColor: "white",
+            style: "horizontal",
+            horizontal: {
+                menuItemPosition: "glue"
+            },
+            vertical: {
+                menuItemPosition: "spaced",
+                direction: "up"
+            },
+            circle: {
+                radius: 90
+            },
+            margin: "small",
+            size: 80,
+            bounce: true,
+            bounceLength: "small",
+            transitionStep: 50,
+            hover: "#5dbb89"
+        });
+        $("#gooey-round").gooeymenu({
+            bgColor: "#68d099",
+            contentColor: "white",
+            style: "circle",
+            horizontal: {
+                menuItemPosition: "spaced"
+            },
+            vertical: {
+                menuItemPosition: "spaced",
+                direction: "up"
+            },
+            circle: {
+                radius: 85
+            },
+            margin: "small",
+            size: 80,
+            bounce: true,
+            bounceLength: "small",
+            transitionStep: 100,
+            hover: "#5dbb89"
+        });
+        $("#gooey-API").gooeymenu({
+            bgColor: "#68d099",
+            contentColor: "white",
+            style: "circle",
+            circle: {
+                radius: 85
+            },
+            margin: "small",
+            size: 70,
+            bounce: true,
+            bounceLength: "small",
+            transitionStep: 100,
+            hover: "#5dbb89",
+            open: function() {
+                $(this).find(".gooey-menu-item").css("background-color", "steelblue");
+                $(this).find(".open-button").css("background-color", "steelblue");
+            },
+            close: function() {
+                $(this).find(".gooey-menu-item").css("background-color", "#ffdf00");
+                $(this).find(".open-button").css("background-color", "#ffdf00");
+            }
+        });
+        $("#gooey-v").gooeymenu({
+            bgColor: "#68d099",
+            contentColor: "white",
+            style: "vertical",
+            horizontal: {
+                menuItemPosition: "glue"
+            },
+            vertical: {
+                menuItemPosition: "spaced",
+                direction: "up"
+            },
+            circle: {
+                radius: 90
+            },
+            margin: "small",
+            size: 70,
+            bounce: true,
+            bounceLength: "small",
+            transitionStep: 100,
+            hover: "#68d099"
+        });
+
+    });
     </script>
   </body>
 </html>
