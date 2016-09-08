@@ -124,7 +124,7 @@ i.desc {
 #gooey-round .gooey-menu-item,
 #gooey-API .gooey-menu-item {
     margin-top: 6.5em;
-    margin-left: 3.2em;
+    margin-left: 8.2em;
 }
 .fa.fa-angle-double-up {
     position: fixed;
@@ -203,8 +203,8 @@ i.desc {
     #gooey-API .open-button,
     #gooey-round .gooey-menu-item,
     #gooey-API .gooey-menu-item {
-        margin-top: 6.5em;
-        margin-left: 8.2em;
+        margin-top: 3.5em;
+        margin-left: 3.2em;
     }
     .gooeySVG {
         width: 0;
