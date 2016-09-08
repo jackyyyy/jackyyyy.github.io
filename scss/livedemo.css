@@ -2,14 +2,17 @@ html {
     width: 100%;
     font-size: 62.5%
 }
+
 body {
     width: 100%;
     background-color: #f6f8f9;
     font-family: Verdana, Geneva, sans-serif;
 }
+
 a {
     color: inherit;
 }
+
 h1,
 h2,
 h3,
@@ -19,13 +22,16 @@ h4 {
     margin-top: 1em;
     color: #6a7989;
 }
+
 h1 {
     font-size: 3em;
     color: #386890;
 }
+
 h2 {
     font-size: 1.7em;
 }
+
 p {
     color: #6a7989;
     font-size: 1.1em;
@@ -34,19 +40,24 @@ p {
     text-align: left;
     line-height: 2em;
 }
+
 i.desc {
     font-size: 1.2em;
     line-height: 1.1em;
     color: #768799;
 }
+
 .bold {
     font-weight: 500;
     color: #525e6b;
 }
+
 .plugin-demo-header {
     text-align: center;
     margin: 1em 2em 6em 2em;
 }
+
+
 /*Sections*/
 
 .feature {
@@ -62,10 +73,12 @@ i.desc {
     position: relative;
     display: inline-block;
 }
+
 .feature-desc {
     font-variant: small-caps;
     text-align: center;
 }
+
 .section-cont {
     margin: 0 auto;
     margin-top: 3em;
@@ -74,13 +87,16 @@ i.desc {
     box-shadow: #cadee9 -1px 1px 10px;
     display: block;
 }
+
 .feature-cont {
     text-align: center;
 }
+
 .feature-cont p {
     margin-left: 2em;
     margin-top: 1em;
 }
+
 .section-label {
     font-size: 2em;
     color: #647883;
@@ -89,16 +105,21 @@ i.desc {
     margin-top: 2em;
     margin-bottom: 2em;
 }
+
 #round {
     min-height: 25em;
 }
+
 #menu-v-example {
     min-height: 40em;
 }
+
 #docs {
     display: none;
     margin: auto;
 }
+
+
 /*Menus*/
 
 #gooey-upper .gooey-menu-item,
@@ -106,19 +127,28 @@ i.desc {
     left: 50%;
     top: 50%;
 }
+
 #gooey-h .open-button,
 #gooey-h .gooey-menu-item {
     margin-left: .6em;
 }
+
 #gooey-v .open-button,
 #gooey-v .gooey-menu-item {
     margin-top: 30em;
 }
+
 #gooey-round,
 #gooey-API {
     width: 280px;
     height: 235px;
+    position: absolute;
+    left: 50%;
+    margin-left: -140px;
+    top: 50%;
+    margin-top: -117px;
 }
+
 #gooey-round .open-button,
 #gooey-API .open-button,
 #gooey-round .gooey-menu-item,
@@ -126,6 +156,7 @@ i.desc {
     margin-top: 6.5em;
     margin-left: 8.2em;
 }
+
 .fa.fa-angle-double-up {
     position: fixed;
     left: 95%;
@@ -133,18 +164,20 @@ i.desc {
     cursor: pointer;
     color: #748c99;
 }
+
+
 /* Responsive styles */
 
 @media screen and (min-device-width: 320px) and (orientation: portrait) {
-.fa.fa-angle-double-up {
+    .fa.fa-angle-double-up {
         left: 75%;
     }
 }
-@media screen and (min-width: 320px) and (max-width: 780px) and (orientation: landscape) { 
-.fa.fa-angle-double-up {
+
+@media screen and (min-width: 320px) and (max-width: 780px) and (orientation: landscape) {
+    .fa.fa-angle-double-up {
         left: 89%;
     }
-
 }
 
 @media (max-width: 780px) {
@@ -168,8 +201,9 @@ i.desc {
         left: 44%;
         top: 70%;
     }
-    #gooey-round .gooey-menu-item, #gooey-round .open-button {
-        top:50%;
+    #gooey-round .gooey-menu-item,
+    #gooey-round .open-button {
+        top: 50%;
     }
     #gooey-h .open-button,
     #gooey-h .gooey-menu-item {
@@ -190,7 +224,7 @@ i.desc {
         min-height: 23em;
     }
     #gooey-API {
-        margin-top:6em;
+        margin-top: 6em;
     }
     .vertical-example {
         min-height: 15em;
@@ -236,4 +270,3 @@ i.desc {
         min-height: 35em;
     }
 }
-

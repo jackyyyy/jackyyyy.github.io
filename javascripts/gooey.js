@@ -108,7 +108,7 @@
                 return a.appendChild(b) },
             responsiveStyles: function() {
                 var d = 0 < window.innerWidth ? window.innerWidth : screen.width;
-                320 <= d && 480 >= d ? (a.size /= 1.4, a.circle.radius /= 1.2) : 480 < d && 768 >= d ? a.size /= 1.2 : 780 < d && 1024 >= d && (a.circle.radius /= 1.2, a.size /= 1.1);
+                // 320 <= d && 480 >= d ? (a.size /= 1.4, a.circle.radius /= 1.2) : 480 < d && 768 >= d ? a.size /= 1.2 : 780 < d && 1024 >= d && (a.circle.radius /= 1.2, a.size /= 1.1);
                 b.els.item.css({ width: a.size + "px", height: a.size + "px", color: a.contentColor, "background-color": a.bgColor, "line-height": a.size + "px" });
                 b.els.button.css({ width: a.size + "px", height: a.size + "px", "background-color": a.bgColor, "line-height": a.size + "px" });
                 k.find(".burger").css({
