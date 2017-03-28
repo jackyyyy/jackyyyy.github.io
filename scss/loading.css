@@ -7,7 +7,6 @@ DEMO 4
   background: rgba(0, 50, 250, 0);
   position: relative;
   margin: 50px auto;
-  float: left;
   width: 48px;
   height: 48px;
   animation-name: rotate; }

@@ -127,7 +127,9 @@
         //     }
         // }
         var tmpDiv = '<div class="loading"></div>';
-        $(".loading-special").append(tmpDiv);
+        for(i = 0; i < 4; i++) {
+            $(".loading-special").append(tmpDiv);
+        }
 
         function rotateP(index) {
             var imgarr = $(".trans3d .pc3d");
