@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>transform3d</title>
+    <link rel="stylesheet" type="text/css" href="../scss/index.css">
+    <link rel="stylesheet" type="text/css" href="../scss/circle.css">
+    <link rel="stylesheet" type="text/css" href="../scss/flower.css">
+    <link rel="stylesheet" type="text/css" href="../scss/loading.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- preserve-3d -->
+        <div class="item trans3d">
+            <div class="pc3d"> <img src="../images/3.jpg"> </div>
+            <div class="pc3d"> <img src="../images/4.jpg"> </div>
+            <div class="pc3d"> <img src="../images/5.jpg"> </div>
+            <div class="pc3d"> <img src="../images/1.jpg"> </div>
+            <div class="pc3d"> <img src="../images/2.jpg"> </div>
+            <div class="pc3d"> <img src="../images/6.jpg"> </div>
+            <div class="pc3d"> <img src="../images/7.jpg"> </div>
+            <div class="pc3d"> <img src="../images/8.jpg"> </div>
+        </div>
+        <!-- preserve-3d end -->
+        <!-- transform-origin -->
+        <div class="item show-hide-item">
+            <img class="img1 img1-hover" src="../images/1.jpg" />
+            <img class="img2 img2-hover" src="../images/2.jpg" />
+        </div>
+        <!-- transform-origin end -->
+        <!-- icon hover -->
+        <div class="item circle-item">
+            <div class="circle special-1">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-2">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-16">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-3">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-4">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-5">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-6">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-7">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-8">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-9">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-10">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-11">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-12">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-13">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-14">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-15">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-17">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+            <div class="circle special-18">
+                <a class="special-icon special-earth">地球</a>
+            </div>
+        </div>
+        <!-- icon hover end -->
+        <!-- 万花丛中 -->
+        <div class="item flower-item">
+            <div class="flower">
+                <div class="red-circle"></div>
+            </div>
+        </div>
+        <!-- 万花丛中 end -->
+        <!-- loading -->
+        <div class="item loading-special">
+        </div>
+        <!-- loading end -->
+        <!-- changeTest -->
+        <!-- <div>
+        <input type="text" name="input1" id="test1" />
+        <input type="text" name="input2" id="test2" />
+        <div id="inp-cont"></div>
+    </div> -->
+        <!-- changeTest end -->
+    </div>
+    <script src="http://www.jq22.com/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="../javascripts/jquery-2.1.1.min.js"><\/script>')
+    </script>
+    <!-- <script src="js/jquery.hover3d.js"></script> -->
+    <script>
+    $(document).ready(function() {
+        //changeTest
+        // var input1 = $("#test1"),
+        //     input2 = $("#test2");
+        // var inpArr = [input1, input2];
+        // for (var i = 0; i < inpArr.length; i++) {
+        //     if (inpArr[i].on) {
+        //         inpArr[i].on("change", function() {
+        //             console.log(this.value);
+        //             $("#inp-cont").html(this.value);
+        //         })
+        //     }
+        // }
+        var tmpDiv = '<div class="loading"></div>';
+        for (i = 0; i < 8; i++) {
+            $(".loading-special").append(tmpDiv);
+        }
+
+        function rotateP(index) {
+            var imgarr = $(".trans3d .pc3d");
+            if (index) {
+                console.log(imgarr.eq(index).css("transform"));
+                if (index < imgarr.length / 2) {
+                    for (var i = 0; i < imgarr.length; i++) {
+                        imgarr.eq(i).css("transform", "rotateY(" + (i - index) * 45 + "deg) translateZ(" + 300 + "px)");
+                    }
+                } else {
+                    for (var i = 0; i < imgarr.length; i++) {
+                        imgarr.eq(i).css("transform", "rotateY(" + (i + imgarr.length - index) * 45 + "deg) translateZ(" + 300 + "px)");
+                    }
+                }
+            } else {
+                for (var i = 0; i < imgarr.length; i++) {
+                    imgarr.eq(i).css({
+                        "transform": "rotateY(" + i * 45 + "deg) translateZ(" + 300 + "px)"
+                    });
+                }
+            }
+        };
+        rotateP();
+        var inter = 0;
+        var setInter = setInterval(function() {
+            inter += 1;
+            $("trans3d").css({
+                "perspective-origin": inter + "% 100%"
+            });
+        }, 10)
+        $(".pc3d").on("click", function() {
+            rotateP($(this).index());
+        });
+    });
+    </script>
+</body>
+
+</html>

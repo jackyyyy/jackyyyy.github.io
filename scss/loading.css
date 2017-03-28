@@ -1,0 +1,65 @@
+/*
+===================================================================== 
+DEMO 4
+=====================================================================
+*/
+.loading {
+  background: rgba(0, 50, 250, 0);
+  position: relative;
+  margin: 100px;
+  float: left;
+  width: 48px;
+  height: 48px;
+  animation-name: rotate; }
+
+.loading,
+.loading:before,
+.loading:after {
+  border-radius: 100%;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in; }
+
+.loading:before,
+.loading:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit; }
+
+.loading:before {
+  background: rgba(200, 250, 100, 0);
+  animation-name: ring; }
+
+.loading:after {
+  background: rgba(250, 0, 200, 0);
+  animation-name: ring2; }
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotateZ(0deg) scaleX(0.1) scaleY(0.1) translateZ(0);
+    box-shadow: inset 13px 0 0 rgba(255, 0, 0, 0.5), inset 0 13px 0 rgba(252, 150, 0, 0.5), inset -13px 0 0 rgba(0, 255, 0, 0.5), inset 0 -13px 0 rgba(0, 150, 255, 0.5); }
+  85%,
+  100% {
+    -webkit-transform: rotateZ(3600deg) scaleX(2.01) scaleY(2) translateZ(0);
+    box-shadow: inset 0 0 0 rgba(255, 0, 0, 0), inset 0 0 0 rgba(252, 150, 0, 0), inset 0 0 0 rgba(0, 255, 0, 0), inset 0 0 0 rgba(0, 150, 255, 0); } }
+
+@-webkit-keyframes ring {
+  0% {
+    -webkit-transform: scaleX(0.1) scaleY(0.5);
+    box-shadow: inset 13px 0 0 rgba(255, 0, 0, 0.5), inset 0 13px 0 rgba(252, 150, 0, 0.5), inset -13px 0 0 rgba(0, 255, 0, 0.5), inset 0 -13px 0 rgba(0, 150, 255, 0.5); }
+  75%,
+  100% {
+    -webkit-transform: scaleX(2) scaleY(2.1);
+    box-shadow: inset 0 0 0 rgba(255, 0, 0, 0), inset 0 0 0 rgba(252, 150, 0, 0), inset 0 0 0 rgba(0, 255, 0, 0), inset 0 0 0 rgba(0, 150, 255, 0); } }
+
+@-webkit-keyframes ring2 {
+  0% {
+    -webkit-transform: scaleX(0.5) scaleY(0.1);
+    box-shadow: inset 13px 0 0 rgba(255, 0, 0, 0.5), inset 0 13px 0 rgba(252, 150, 0, 0.5), inset -13px 0 0 rgba(0, 255, 0, 0.5), inset 0 -13px 0 rgba(0, 150, 255, 0.5); }
+  65%,
+  100% {
+    -webkit-transform: scaleX(2) scaleY(2.1);
+    box-shadow: inset 0 0 0 rgba(255, 0, 0, 0), inset 0 0 0 rgba(252, 150, 0, 0), inset 0 0 0 rgba(0, 255, 0, 0), inset 0 0 0 rgba(0, 150, 255, 0); } }
