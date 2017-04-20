@@ -67,4 +67,4 @@ $(function() {
     $(".pc3d").on("click", function() {
         rotateP($(this).index());
     });
-})()
+})
