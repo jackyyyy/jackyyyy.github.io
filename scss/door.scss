@@ -1,0 +1,138 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.page1 {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    background: #CC3333;
+    transition: all .5s ease-in-out;
+    transform-style: preserve-3d;
+    border-right: 1px solid #FF6666;
+    z-index: 1;
+}
+
+.page2 {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    background: #CC3333;
+    transition: all .5s ease-in-out;
+    transform-style: preserve-3d;
+    border-left: 1px solid #FF6666;
+    z-index: 1;
+}
+
+#fz {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    margin-left: -51px;
+    margin-top: -51px;
+    top: 50%;
+    border-radius: 50%;
+    line-height: 100px;
+    color: #fff;
+    background-color: #CC3333;
+    cursor: pointer;
+    text-align: center;
+    transform-style: preserve-3d;
+    z-index: 2;
+    transition: all .5s;
+    transform: scale(.95);
+    border: 1px solid #FF6666;
+}
+
+.left_open {
+    transform: perspective(800px) translateX(-50%) rotateY(70deg) translateZ(0);
+    opacity: .8;
+}
+
+.right_open {
+    transform: perspective(800px) translateX(50%) rotateY(-70deg) translateZ(0);
+    opacity: .8;
+}
+
+.close {
+    transform: perspective(800px) translateX(0) rotateY(0deg) translateZ(0);
+    opacity: 1;
+}
+
+.lock_animate {
+    transform: scale(.55) translateY(500px) !important;
+}
+
+#fz:hover {
+    transform: scale(1);
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: #CCFFFF;
+}
+
+.menu {
+    padding: 15%;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu ul li {
+    margin: 0 auto;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    width: 250px;
+    opacity: 0;
+    animation-fill-mode: forwards!important;
+}
+
+.menu ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+@keyframes lianimate {
+    0% {
+        transform: scale(0) translateY(-100px);
+        opacity: 0
+    }
+    50% {
+        transform: scale(.5) translateY(300px);
+        opacity: .5
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes lianimate_away {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 1
+    }
+    50% {
+        transform: scale(.8) translateY(-300px);
+        opacity: .5
+    }
+    100% {
+        transform: scale(.5) translateY(-600px);
+        opacity: 0
+    }
+}

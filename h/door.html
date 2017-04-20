@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+    <script type="text/javascript" src="../javascripts/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" href="../css/door.css">
+</head>
+
+<body>
+    <div name="btn" id="fz">开</div>
+    <div class="page1"></div>
+    <div class="page2"></div>
+    <div class="wrap">
+        <div class="menu">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">MY WORLD</a></li>
+                <li><a href="#">ABUOT ME</a></li>
+                <li><a href="#">CONTACT ME</a></li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(function() {
+        $("#fz").on("click", function() {
+            var $li = $("li");
+            window.event.stopPropagation();
+            if ($(this).html() == "开") {
+                $(this).addClass("lock_animate");
+                $(".page1").addClass("left_open").removeClass("close");
+                $(".page2").addClass("right_open").removeClass("close");
+                $(this).html("关");
+                for (var i = 0; i < $li.length; i++) {
+                    $li.eq(i).css({
+                        "animation": "lianimate " + (i+1/2)/2 + "s"
+                    });
+                }
+            } else {
+                $(this).removeClass("lock_animate");
+                $(".page1").removeClass("left_open").addClass("close");
+                $(".page2").removeClass("right_open").addClass("close");
+                $(this).html("开");
+                for (var i = 0; i < $li.length; i++) {
+                    $li.eq(i).css({
+                        "animation": "lianimate_away " + (.3+i/3) + "s"
+                    });
+                }
+            }
+        });
+    })
+    </script>
+</body>
+
+</html>
