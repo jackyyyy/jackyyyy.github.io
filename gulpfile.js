@@ -8,7 +8,7 @@ var gulp = require("gulp"),
 gulp.task("sass", function(){
 	gulp.src("scss/*.scss")
 		.pipe(sass())
-		.pipe(gulp.dest("scss"))
+		.pipe(gulp.dest("css"))
 });
 
 //压缩css文件 合并css文件

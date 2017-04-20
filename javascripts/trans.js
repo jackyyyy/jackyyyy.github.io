@@ -8,7 +8,7 @@ $(function() {
             }
         } else if (dom == ".loading-special") {
             for (i = 0; i < 4; i++) {
-                tmpDiv.push('<div class="loading"></div>');
+                tmpDiv.push('<div class="loading' + i + '"></div>');
             }
         } else if (dom == ".trans3d") {
             for (var i = 0; i < 8; i++) {
@@ -38,7 +38,7 @@ $(function() {
     function rotateP(index) {
         var imgarr = $(".trans3d .pc3d");
         if (index) {
-            console.log(imgarr.eq(index).css("transform"));
+            // console.log(imgarr.eq(index).css("transform"));
             if (index < imgarr.length / 2) {
                 for (var i = 0; i < imgarr.length; i++) {
                     imgarr.eq(i).css("transform", "rotateY(" + (i - index) * 45 + "deg) translateZ(" + 300 + "px)");

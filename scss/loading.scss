@@ -4,10 +4,34 @@ DEMO 4
 =====================================================================
 */
 
+.loading-special {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading0 {
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+.loading1 {
+    position: relative;
+    top: 50px;
+    right: 50px;
+}
+.loading2 {
+    position: relative;
+    bottom: 50px;
+    left: 50px;
+}
+.loading3 {
+    position: relative;
+    bottom: 50px;
+    right: 50px;
+}
+
 .loading {
     background: rgba(0, 50, 250, 0);
-    position: relative;
-    margin: 50px auto;
     width: 48px;
     height: 48px;
     animation-name: rotate;
