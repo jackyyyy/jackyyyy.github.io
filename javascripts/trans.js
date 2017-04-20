@@ -8,7 +8,7 @@ $(function() {
             }
         } else if (dom == ".loading-special") {
             for (i = 0; i < 4; i++) {
-                tmpDiv.push('<div class="loading' + i + '"></div>');
+                tmpDiv.push('<div class="loading loading' + i + '"></div>');
             }
         } else if (dom == ".trans3d") {
             for (var i = 0; i < 8; i++) {
