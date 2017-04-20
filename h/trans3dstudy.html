@@ -13,16 +13,7 @@
 <body>
     <div class="wrapper">
         <!-- preserve-3d -->
-        <div class="item trans3d">
-            <div class="pc3d"> <img src="../images/3.jpg"> </div>
-            <div class="pc3d"> <img src="../images/4.jpg"> </div>
-            <div class="pc3d"> <img src="../images/5.jpg"> </div>
-            <div class="pc3d"> <img src="../images/1.jpg"> </div>
-            <div class="pc3d"> <img src="../images/2.jpg"> </div>
-            <div class="pc3d"> <img src="../images/6.jpg"> </div>
-            <div class="pc3d"> <img src="../images/7.jpg"> </div>
-            <div class="pc3d"> <img src="../images/8.jpg"> </div>
-        </div>
+        <div class="item trans3d"></div>
         <!-- preserve-3d end -->
         <!-- transform-origin -->
         <div class="item show-hide-item">
@@ -31,8 +22,7 @@
         </div>
         <!-- transform-origin end -->
         <!-- icon hover -->
-        <div class="item circle-item">
-        </div>
+        <div class="item circle-item"></div>
         <!-- icon hover end -->
         <!-- 万花丛中 -->
         <div class="item flower-item">
@@ -42,8 +32,7 @@
         </div>
         <!-- 万花丛中 end -->
         <!-- loading -->
-        <div class="item loading-special">
-        </div>
+        <div class="item loading-special"></div>
         <!-- loading end -->
         <!-- changeTest -->
         <!-- <div>
@@ -60,16 +49,27 @@
     <!-- <script src="js/jquery.hover3d.js"></script> -->
     <script>
     $(document).ready(function() {
-        function appendIconHover(){
-            for(var i = 0; i < 18; i++) {
-                var circleicon = ['<div class="circle special-' + (i+1) + '">',
-                                    '<a class="special-icon special-earth">地球</a>',
-                                  '</div>'].join(" ");
-                $(".circle-item").append(circleicon);
+        function appendDom(dom) {
+            var tmpDiv = [];
+            if (dom == ".circle-item") {
+                for (var i = 0; i < 18; i++) {
+                    tmpDiv.push('<div class="circle special-' + (i + 1) + '"><a class="special-icon special-earth">地球</a></div>');
+                }
+            } else if(dom == ".loading-special"){
+                for (i = 0; i < 4; i++) {
+                    tmpDiv.push('<div class="loading"></div>');
+                }
+            } else if(dom == ".trans3d") {
+                for(var i = 0; i < 8; i++) {
+                    tmpDiv.push('<div class="pc3d"> <img src="../images/'+(i+1)+'.jpg"></div>');
+                }
             }
+            $(dom).append(tmpDiv.join(" "));
         }
 
-        appendIconHover();
+        appendDom(".circle-item");
+        appendDom(".loading-special");
+        appendDom(".trans3d");
 
         //changeTest
         // var input1 = $("#test1"),
@@ -83,10 +83,6 @@
         //         })
         //     }
         // }
-        var tmpDiv = '<div class="loading"></div>';
-        for(i = 0; i < 4; i++) {
-            $(".loading-special").append(tmpDiv);
-        }
 
         function rotateP(index) {
             var imgarr = $(".trans3d .pc3d");
