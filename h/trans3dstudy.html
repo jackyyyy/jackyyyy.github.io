@@ -32,60 +32,6 @@
         <!-- transform-origin end -->
         <!-- icon hover -->
         <div class="item circle-item">
-            <div class="circle special-1">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-2">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-16">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-3">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-4">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-5">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-6">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-7">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-8">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-9">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-10">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-11">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-12">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-13">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-14">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-15">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-17">
-                <a class="special-icon special-earth">地球</a>
-            </div>
-            <div class="circle special-18">
-                <a class="special-icon special-earth">地球</a>
-            </div>
         </div>
         <!-- icon hover end -->
         <!-- 万花丛中 -->
@@ -114,6 +60,17 @@
     <!-- <script src="js/jquery.hover3d.js"></script> -->
     <script>
     $(document).ready(function() {
+        function appendIconHover(){
+            for(var i = 0; i < 18; i++) {
+                var circleicon = ['<div class="circle special-"' + (i+1) + '>',
+                                    '<a class="special-icon special-earth">地球</a>',
+                                  '</div>'].join();
+                $(".circle-item").append(circleicon);
+            }
+        }
+
+        appendIconHover();
+
         //changeTest
         // var input1 = $("#test1"),
         //     input2 = $("#test2");
