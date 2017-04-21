@@ -110,6 +110,9 @@
     -webkit-transition-duration: 180ms;
     -o-transition-duration: 180ms
 }
+.navimenu .gooey-menu-item i {
+    margin: 30px auto;
+}
 
 .navimenu .open-button {
     z-index: 2;
