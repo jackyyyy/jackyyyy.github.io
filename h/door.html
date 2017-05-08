@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>menu</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>Door</title>
     <script type="text/javascript" src="../javascripts/jquery-1.10.2.min.js"></script>
     <link rel="stylesheet" href="../css/door.css">
 </head>
@@ -28,7 +29,7 @@
             var $li = $("li");
             window.event.stopPropagation();
             if ($(this).html() == "开") {
-                $(this).addClass("lock_animate");
+                $(this).css({"animation": "toBottom .5s"});
                 $(".page1").addClass("left_open").removeClass("close");
                 $(".page2").addClass("right_open").removeClass("close");
                 $(this).html("关");
@@ -38,7 +39,7 @@
                     });
                 }
             } else {
-                $(this).removeClass("lock_animate");
+                $(this).css({"animation": "toCenter .5s"});
                 $(".page1").removeClass("left_open").addClass("close");
                 $(".page2").removeClass("right_open").addClass("close");
                 $(this).html("开");
