@@ -12,12 +12,30 @@ gulp.task("sass", function(){
 });
 
 //压缩css文件 合并css文件
-gulp.task('css-concat', function() {
-    gulp.src('scss/*.css')
-        .pipe(concat('all.css')) //合并
-        .pipe(cssmin()) //压缩
+// gulp.task('css-concat', function() {
+//     gulp.src('scss/*.css')
+//         .pipe(concat('all.css')) //合并
+//         .pipe(cssmin()) //压缩
+//         .pipe(rename({ suffix: '.min' })) //命名
+//         .pipe(gulp.dest('css'))
+// });
+
+//t3css-min
+gulp.task('t3cssmin', function(){
+    gulp.src(['css/t3.css','css/circle.css','css/flower.css','css/loading.css'])
+        .pipe(concat('main_t3.css'))
+        .pipe(cssmin())
         .pipe(rename({ suffix: '.min' })) //命名
-        .pipe(gulp.dest('dest'))
+        .pipe(gulp.dest('css'))
 });
 
-gulp.task("default", ["sass", "css-concat"]);
+//index-min
+gulp.task('indexmin', function(){
+    gulp.src(['css/bootstrap-3.3.5.css','css/gooey.css','css/livedemo.css','css/index.css'])
+        .pipe(concat('all_index.css'))
+        .pipe(cssmin())
+        .pipe(rename({ suffix: '.min'}))
+        .pipe(gulp.dest('css'))
+})
+
+gulp.task("default", ["sass"]);
