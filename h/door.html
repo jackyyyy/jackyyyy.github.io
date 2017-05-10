@@ -29,23 +29,27 @@
             var $li = $("li");
             window.event.stopPropagation();
             if ($(this).html() == "开") {
-                $(this).css({"animation": "toBottom .5s"});
+                $(this).css({
+                    "animation": "toBottom .5s"
+                });
                 $(".page1").addClass("left_open").removeClass("close");
                 $(".page2").addClass("right_open").removeClass("close");
                 $(this).html("关");
                 for (var i = 0; i < $li.length; i++) {
                     $li.eq(i).css({
-                        "animation": "lianimate " + (i+1/2)/2 + "s"
+                        "animation": "lianimate " + (i + (1 - (i + 1) / 3)) + "s"
                     });
                 }
             } else {
-                $(this).css({"animation": "toCenter .5s"});
+                $(this).css({
+                    "animation": "toCenter 1.5s"
+                });
                 $(".page1").removeClass("left_open").addClass("close");
                 $(".page2").removeClass("right_open").addClass("close");
                 $(this).html("开");
                 for (var i = 0; i < $li.length; i++) {
                     $li.eq(i).css({
-                        "animation": "lianimate_away " + (.3+i/3) + "s"
+                        "animation": "lianimate_away " + (i + (1 - (i + 1) / 3)) + "s"
                     });
                 }
             }

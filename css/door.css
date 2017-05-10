@@ -15,7 +15,7 @@ body {
     height: 100%;
     left: 0;
     background: #CC3333;
-    transition: all .5s ease-in-out;
+    transition: all 1.5s ease-in-out;
     transform-style: preserve-3d;
     border-right: 1px solid #FF6666;
     z-index: 1;
@@ -27,7 +27,7 @@ body {
     height: 100%;
     right: 0;
     background: #CC3333;
-    transition: all .5s ease-in-out;
+    transition: all 1.5s ease-in-out;
     transform-style: preserve-3d;
     border-left: 1px solid #FF6666;
     z-index: 1;
@@ -66,6 +66,7 @@ body {
 }
 
 .close {
+    transition-delay: .5s;
     transform: perspective(800px) translateX(0) rotateY(0deg) translateZ(0);
     opacity: 1;
 }
@@ -112,33 +113,34 @@ body {
 }
 
 @keyframes toBottom {
-  0% {
-    top: 50%;
-    transform:scale(1);
-  }
-  100%{
-    top: 90%;
-    transform:scale(.5);
-  }
+    0% {
+        top: 50%;
+        transform: scale(1);
+    }
+    100% {
+        top: 90%;
+        transform: scale(.5);
+    }
 }
+
 @keyframes toCenter {
-  0% {
-    top: 90%;
-    transform:scale(.5);
-  }
-  100%{
-    top: 50%;
-    transform:scale(1);
-  }
+    0%,50% {
+        top: 90%;
+        transform: scale(.5);
+    }
+    100% {
+        top: 50%;
+        transform: scale(1);
+    }
 }
 
 @keyframes lianimate {
     0% {
-        transform: scale(0) translateY(-100px);
+        transform: scale(0) translateY(-300px);
         opacity: 0;
     }
     50% {
-        transform: scale(0.5) translateY(300px);
+        transform: scale(0.5) translateY(200px);
         opacity: .5;
     }
     100% {
@@ -152,12 +154,16 @@ body {
         transform: scale(1) translateY(0);
         opacity: 1;
     }
-    50% {
-        transform: scale(0.8) translateY(-300px);
+    25% {
+        transform: scale(1) translateY(30px);
         opacity: .5;
     }
+    50% {
+        transform: scale(0.5) translateY(-900px);
+        opacity: .3;
+    }
     100% {
-        transform: scale(0.5) translateY(-600px);
+        transform: scale(0) translateY(-1800px);
         opacity: 0;
     }
 }
