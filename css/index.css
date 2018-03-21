@@ -79,3 +79,7 @@ blink {
     height: 190px;
     padding: 0 5px;
 }
+
+#gooey-API a {
+    font-size: 15px;
+}
