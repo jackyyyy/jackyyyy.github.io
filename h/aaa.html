@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wrap {
+        width: 100%;
+        height: 100%;
+        background-color: #ddd;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .top {
+        height: 100px;
+        width: 100%;
+        background-color: #666;
+    }
+    
+    .bottom {
+        height: 100px;
+        width: 100%;
+        background-color: #999;
+    }
+    
+    .center {
+        display: flex;
+        flex: 1;
+        width: 100%;
+        background-color: #eee;
+        flex-direction: row;
+    }
+    
+    .left {
+        width: 100px;
+        height: 100%;
+        background-color: #333;
+    }
+    
+    .right {
+        width: 100px;
+        height: 100%;
+        background-color: #000;
+    }
+    
+    .middle {
+        flex: 1;
+        background-color: #fff;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="top"></div>
+        <div class="center">
+            <div class="left"></div>
+            <div class="middle">
+                <!--  <div style="width: 640px; height: 360px; ">
+					<script type="text/javascript" src="../javascripts/sewise/sewise.player.min.js?server=live&type=http&streamurl=http://35.189.191.250:1935/vod/mp4:toystory.mp4/playlist.m3u8&shifttime=&buffer=5&lang=en_US&logo=../images/1.jpg&skin=liveWhite"></script>
+				</div> -->
+                <div style="width: 640px; height: 360px; ">
+                    <script type="text/javascript" src="../javascripts/sewise/sewise.player.min.js"></script>
+                    <script type="text/javascript">
+                    SewisePlayer.setup({
+                        server: "live",
+                        type: "m3u8",
+                        streamurl: "http://35.189.191.250:1935/vod/mp4:toystory.mp4/playlist.m3u8",
+                        skin: "vodWhite",
+                        title: "Tile 标题",
+                        lang: 'zh_CN',
+                        poster: '../images/1.jpg',
+                        logo: '../images/1.jpg',
+                        autostart: true
+                            // fallbackurls: {
+                            //     ogg: "http://jackzhang1204.github.io/materials/mov_bbb.ogg",
+                            //     webm: "http://jackzhang1204.github.io/materials/mov_bbb.webm"
+                            // }
+                    });
+                    </script>
+                </div>
+            </div>
+            <div class="right"></div>
+        </div>
+        <div class="bottom"></div>
+    </div>
+</body>
+
+</html>
