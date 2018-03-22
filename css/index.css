@@ -12,6 +12,10 @@ body {
     font-family: Arial;
 }
 
+a {
+    text-decoration: none;
+}
+
 #myContent,
 #myContent blink {
     position: absolute;

@@ -34,7 +34,7 @@ a:hover {
     width: 1024px;
 }
 
-.wrapper {
+.wrapper_rt {
     display: inline-block;
     width: 310px;
     height: 100px;
@@ -50,7 +50,7 @@ a:hover {
     perspective: 4000px;
 }
 
-.item {
+.item_rt {
     height: 100px;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
