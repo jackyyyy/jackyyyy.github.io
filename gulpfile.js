@@ -22,7 +22,7 @@ gulp.task("sass", function(){
 
 //t3css-min
 gulp.task('t3cssmin', function(){
-    gulp.src(['css/t3.css','css/circle.css','css/flower.css','css/loading.css','rotate_transform.css'])
+    gulp.src(['css/t3.css','css/circle.css','css/flower.css','css/loading.css','css/rotate_transform.css'])
         .pipe(concat('main_t3.css'))
         .pipe(cssmin())
         .pipe(rename({ suffix: '.min' })) //命名

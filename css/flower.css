@@ -1,67 +1,76 @@
 .flower-item {
-  position: relative;
-  background: #b5e3ff; }
+    position: relative;
+    background: #b5e3ff;
+}
 
 .flower {
-  position: absolute;
-  left: 50%;
-  margin-left: -250px;
-  top: 50%;
-  margin-top: -250px;
-  width: 500px;
-  height: 500px;
-  border-radius: 100%;
-  border: 1px solid #ddd;
-  overflow: hidden;
-  cursor: pointer; }
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    top: 50%;
+    margin-top: -250px;
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    cursor: pointer;
+}
 
 .flower:after {
-  transform: rotate(45deg); }
+    transform: rotate(45deg);
+}
 
 .flower:before,
 .flower:after {
-  position: absolute;
-  content: "";
-  border-radius: 100%;
-  top: 0;
-  left: 0;
-  width: inherit;
-  height: inherit;
-  box-shadow: inset 355px 0 0 rgba(30, 140, 209, 0.2), inset 0 355px 0 rgba(30, 140, 209, 0.2), inset -355px 0 0 rgba(30, 140, 209, 0.2), inset 0 -355px 0 rgba(30, 140, 209, 0.2);
-  transition: all 0.3s; }
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    box-shadow: inset 355px 0 0 rgba(30, 140, 209, 0.2), inset 0 355px 0 rgba(30, 140, 209, 0.2), inset -355px 0 0 rgba(30, 140, 209, 0.2), inset 0 -355px 0 rgba(30, 140, 209, 0.2);
+    transition: all 0.3s;
+}
 
 .flower:hover:before,
 .flower:hover:after {
-  box-shadow: inset 20px 0 0 rgba(255, 0, 0, 0.5), inset 0 20px 0 rgba(252, 150, 0, 0.5), inset -20px 0 0 rgba(0, 255, 0, 0.5), inset 0 -20px 0 rgba(0, 150, 255, 0.5); }
+    box-shadow: inset 20px 0 0 rgba(255, 0, 0, 0.5), inset 0 20px 0 rgba(252, 150, 0, 0.5), inset -20px 0 0 rgba(0, 255, 0, 0.5), inset 0 -20px 0 rgba(0, 150, 255, 0.5);
+}
 
 .flower-item:before,
 .flower-item:after {
-  content: "";
-  display: table; }
+    content: "";
+    display: table;
+}
 
 .flower:hover .red-circle {
-  opacity: 1; }
+    opacity: 1;
+}
 
 .red-circle {
-  position: absolute;
-  width: 310px;
-  height: 310px;
-  top: 50%;
-  margin-top: -155px;
-  left: 50%;
-  margin-left: -155px;
-  background-color: #FF6666;
-  transition: all 0.5s;
-  opacity: 0;
-  border-radius: 50%; }
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    top: 50%;
+    margin-top: -155px;
+    left: 50%;
+    margin-left: -155px;
+    background-color: #FF6666;
+    transition: all 0.5s;
+    opacity: 0;
+    border-radius: 50%;
+}
 
 .red-circle:after {
-  content: "";
-  box-shadow: 0 0 0 30px #FF9966;
-  padding: 30px;
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  left: -30px;
-  top: -30px;
-  border-radius: 100%; }
+    content: "";
+    box-shadow: 0 0 0 30px #FF9966;
+    padding: 30px;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    left: -30px;
+    top: -30px;
+    border-radius: 100%;
+}

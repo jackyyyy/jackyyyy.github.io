@@ -1,4 +1,4 @@
-body {
+.loading-special {
     margin-top: 5em;
     text-align: center;
     color: #414142;
@@ -26,12 +26,15 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
-#container {
-    margin: 0 auto;
-    width: 1024px;
+#container_rt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 660px;
 }
 
 .wrapper_rt {
@@ -39,7 +42,7 @@ a:hover {
     width: 310px;
     height: 100px;
     vertical-align: top;
-    margin: 1em 1.5em 2em 0;
+    margin: .5em;
     cursor: pointer;
     position: relative;
     font-family: Tahoma, Arial;
@@ -60,11 +63,11 @@ a:hover {
     transition: transform .6s;
 }
 
-.item:hover {
+.item_rt:hover {
     transform: translateZ(-50px) rotateX(95deg);
 }
 
-.item img {
+.item_rt img {
     display: block;
     position: absolute;
     top: 0;
@@ -84,7 +87,7 @@ a:hover {
     height: 100px;
 }
 
-.item .information {
+.item_rt .information {
     display: block;
     position: absolute;
     top: 0;
@@ -119,12 +122,12 @@ a:hover {
     font-family: "Oleo Script";
 }
 
-.item:hover img {
+.item_rt:hover img {
     box-shadow: none;
     border-radius: 15px;
 }
 
-.item:hover .information {
+.item_rt:hover .information {
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
     border-radius: 3px;
 }
